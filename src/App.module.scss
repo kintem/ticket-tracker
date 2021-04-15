@@ -1,12 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,700;1,300&display=swap');
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-align: center;
+  background-color: #faba7e;
+  font-family: 'Poppins', sans-serif;
+  color:#3a3939;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    margin: 30px 5px;
+    padding: 20px;
+    background-color: #fdd994;
+    border-radius: 25px;
+    border: 1px solid white;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 20px auto 10px auto;
+  }
+
+  h3 {
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  hr {
+    border: none;
+    border-top: 3px solid #ffaec0;
+    width: 600px;
+    border-radius: 3px;
+  }
 }
 
 .teamContainer {
-  margin: 30px;
+  margin: 30px 20px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;

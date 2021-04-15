@@ -5,11 +5,11 @@ import styles from './Card.module.scss';
 const Card = (props) => {
   const { name, role } = props.member;
   return (
-    <div className={styles.card}>
+    <article className={styles.card}>
       <h3>{name}</h3>
       <p>{role}</p>
-      <Counter />
-    </div>
+      <Counter member={props.member}/>
+    </article>
   )
 }
 

@@ -1,17 +1,27 @@
 import React, {useState} from 'react';
 import styles from './Counter.module.scss';
+import Button from '../Button';
 
-const Counter = () => {
+const Counter = (props) => {
   const [count, setCount] = useState(0);
+  const { member } = props;
 
   return (
-    <div className={styles.counter}>
+    <section className={styles.counter}>
+      <div className={styles.buttonContainer} onClick={()=> {
+        setCount(count !== 0 ? count - 1 : 0);
+        member.ticketCount = count;
+        }}>
+        <Button buttonText="-" />
+      </div>
       <p>{count}</p>
-      <button onClick={()=> setCount(count + 1)}> + </button>
-      <button onClick={()=> {
-        return count !== 0 ? setCount(count - 1) : count
-        }}> - </button>
-    </div>
+      <div className={styles.buttonContainer} onClick={()=> {
+        setCount(count + 1)
+        member.ticketCount = count}
+        }>
+        <Button buttonText="+" />
+      </div>
+    </section>
   )
 }
 
